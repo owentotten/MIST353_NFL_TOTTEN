@@ -1,43 +1,56 @@
+use master;
+GO
+USE MIST353_NFL_RDB_Totten;
 
-INSERT INTO dbo.ConferenceDivision (ConferenceDivisionID, Conference, Division) VALUES (1, 'AFC', 'East'),
-(2, 'AFC', 'North'),
-(3, 'AFC', 'South'),
-(4, 'AFC', 'West'),
-(5, 'NFC', 'East'),
-(6, 'NFC', 'North'),
-(7, 'NFC', 'South'),
-(8, 'NFC', 'West');     
+INSERT INTO ConferenceDivision ( Conference, Division) VALUES ('AFC', 'East'),
+('AFC', 'North'),
+( 'AFC', 'South'),
+( 'AFC', 'West'),
+( 'NFC', 'East'),
+( 'NFC', 'North'),
+( 'NFC', 'South'),
+('NFC', 'West');     
 
 
 
-insert into dbo.Team (TeamID, TeamName, ConferenceDivisionID) VALUES (1, 'Buffalo Bills', 1),
-(2, 'Miami Dolphins', 1),
-(3, 'New England Patriots', 1),
-(4, 'New York Jets', 1),
-(5, 'Baltimore Ravens', 2),
-(6, 'Cincinnati Bengals', 2),
-(7, 'Cleveland Browns', 2),
-(8, 'Pittsburgh Steelers', 2),
-(9, 'Houston Texans', 3),
-(10, 'Indianapolis Colts', 3),
-(11, 'Jacksonville Jaguars', 3),
-(12, 'Tennessee Titans', 3),
-(13, 'Denver Broncos', 4),
-(14, 'Kansas City Chiefs', 4),
-(15, 'Las Vegas Raiders', 4),
-(16, 'Los Angeles Chargers', 4),
-(17, 'Dallas Cowboys', 5),
-(18, 'New York Giants', 5),
-(19, 'Philadelphia Eagles', 5),
-(20, 'Washington Commanders', 5),
-(21, 'Chicago Bears', 6),
-(22, 'Detroit Lions', 6),
-(23, 'Green Bay Packers', 6),
-(24, 'Minnesota Vikings', 6),
-(25, 'Atlanta Falcons', 7),
-(26, 'Carolina Panthers', 7),
-(27, 'New Orleans Saints', 7),
-(28, 'Tampa Bay Buccaneers', 7),
-(29, 'Arizona Cardinals', 8),
-(30, 'Los Angeles Rams', 8),
-(31, 'San Francisco 49ers', 8);
+INSERT INTO Team (TeamName, ConferenceDivisionID)
+VALUES
+('Buffalo Bills', 1),
+('Miami Dolphins', 1),
+('New England Patriots', 1),
+('New York Jets', 1),
+
+('Baltimore Ravens', 2),
+('Cincinnati Bengals', 2),
+('Cleveland Browns', 2),
+('Pittsburgh Steelers', 2),
+
+('Houston Texans', 3),
+('Indianapolis Colts', 3),
+('Jacksonville Jaguars', 3),
+('Tennessee Titans', 3),
+
+('Denver Broncos', 4),
+('Kansas City Chiefs', 4),
+('Las Vegas Raiders', 4),
+('Los Angeles Chargers', 4),
+
+('Dallas Cowboys', 5),
+('New York Giants', 5),
+('Philadelphia Eagles', 5),
+('Washington Commanders', 5),
+
+('Chicago Bears', 6),
+('Detroit Lions', 6),
+('Green Bay Packers', 6),
+('Minnesota Vikings', 6),
+
+('Atlanta Falcons', 7),
+('Carolina Panthers', 7),
+('New Orleans Saints', 7),
+('Tampa Bay Buccaneers', 7),
+
+('Arizona Cardinals', 8),
+('Los Angeles Rams', 8),
+('San Francisco 49ers', 8),
+('Seattle Seahawks', 8);

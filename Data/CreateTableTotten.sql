@@ -8,11 +8,13 @@ GO
  
 USE MIST353_NFL_RDB_Totten;
 GO
- 
+
 -- create tables for first iteration
-CREATE TABLE ConferenceDivision (ConferenceDivisionID INT IDENTITY(1,1) PRIMARY KEY, Conference NVARCHAR(50) , Division NVARCHAR(50));
+DROP TABLE IF EXISTS Team;
+DROP TABLE IF EXISTS ConferenceDivision;
+GO
 
+CREATE TABLE ConferenceDivision (ConferenceDivisionID INT PRIMARY KEY IDENTITY(1,1), Conference NVARCHAR(50) , Division NVARCHAR(50));
+GO
 
-
-
-create table Team (TeamID INT IDENTITY(1,1) PRIMARY KEY, TeamName NVARCHAR(50), ConferenceDivisionID INT FOREIGN KEY REFERENCES ConferenceDivision(ConferenceDivisionID));
+CREATE TABLE Team (TeamID INT IDENTITY(1,1) PRIMARY KEY, TeamName NVARCHAR(50), ConferenceDivisionID INT FOREIGN KEY REFERENCES ConferenceDivision(ConferenceDivisionID));
